@@ -1,0 +1,125 @@
+@import (reference) "../../styles/vars.less";
+
+#block_whatis {
+    @media screen and (max-width: 1440px) {
+        padding-bottom: 50px;
+    }
+    @media screen and (max-width: 880px) {
+        padding-bottom: 20px;
+    }
+    .whatis {
+        position: relative;
+        
+        &__leftBox {
+            margin-left: 50px;
+
+            @media screen and (max-width: 880px) {
+                margin-left: 0px;
+            }
+
+            ul {
+                margin: 0;
+                padding-bottom: 35px;
+
+                @media screen and (max-width: 880px) {
+                    padding-left: 0px !important;
+                }
+            }
+
+            li {
+                list-style: none;
+                padding-top: 10px;
+                position: relative;
+
+                @media screen and (max-width: 880px) {
+                    text-align: left;
+                }
+            }
+
+            li::before {
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                transform: rotate(-140deg);
+                background-image: url(images/triangle.png);
+                position: absolute;
+                top: 20px;
+                left: -30px;
+
+                @media screen and (max-width: 880px) {
+                    display: none;
+                }
+            }
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 41px;
+            padding-bottom: 40px;
+            @media screen and (max-width: 880px) {
+                text-align: left;
+            }
+        }
+
+        &__textUp,
+        &__textBottom,
+        &__textRight {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 26px;
+
+            @media screen and (max-width: 880px) {
+                text-align: left;
+            }
+        }
+
+        &__textUp {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 26px;
+            padding-bottom: 20px;
+
+        }
+
+        &__rightBox {
+            background-color: @color_brown;
+
+            &::before {
+                content: '';
+                right: -200px;
+                position: absolute;
+                width: 30%;
+                background-color: @color_brown;
+                height: 100%;
+
+                @media screen and (max-width: 1440px) {
+                    right: -195px;
+                }
+
+                @media screen and (max-width: 880px) {
+                    display: none;
+                }
+            }
+        }
+
+        &__textRight {
+            color: @color_white;
+            padding: 140px 120px;
+
+            @media screen and (max-width: 1440px) {
+                padding: 140px 50px;
+            }
+            @media screen and (max-width: 1370px) {
+                padding: 153px 50px;
+            }
+
+            @media screen and (max-width: 880px) {
+                padding: 20px;
+                margin: 20px 0px;
+                font-size: 15px;
+            }
+        }
+    }
+}

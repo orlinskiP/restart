@@ -1,0 +1,103 @@
+@import (reference) "../../styles/vars.less";
+
+.ciemny {
+    background-color: @color_white;
+
+    p,
+    h2 {
+        color: @color_black  !important;
+    }
+
+    .doublecolumn__button {
+        background-color: @color_brown;
+        color: @color_white;
+
+    }
+}
+
+.pomarancz {
+    background-color: @color_brown;
+
+    .doublecolumn__button {
+        background-color: @color_white;
+        color: @color_black;
+    }
+}
+
+#block_dwiekolumny {
+    padding: 70px 0px;
+
+    @media screen and (max-width: 880px) {
+        padding: 30px 0px;
+    }
+
+    .doublecolumn {
+
+        &__image {
+            padding-right: 50px;
+
+            @media screen and (max-width: 880px) {
+                padding-right: 0;
+                padding-top: 30px;
+            }
+        }
+
+        &__block {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            h2 {
+                font-size: 25px;
+                font-weight: 600;
+                padding-bottom: 30px;
+                color: @color_white;
+
+                @media screen and (max-width: 880px) {
+                    text-align: left;
+                    font-size: 22px;
+                    padding-bottom: 15px;
+                    padding-top: 30px;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                font-weight: 400;
+                width: 80%;
+                color: @color_white;
+                padding-bottom: 50px;
+
+                @media screen and (max-width: 1370px) {
+                    font-size: 15px;
+                    width: 100%;
+                    text-align: left;
+                }
+
+                @media screen and (max-width: 880px) {
+                    font-size: 15px;
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+        }
+
+        &__novisible {
+            display: none;
+        }
+
+        &__button {
+            padding: 27px 87px;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+
+            @media screen and (max-width: 880px) {
+                font-size: 20px;
+                padding: 20px 60px;
+            }
+
+        }
+    }
+}

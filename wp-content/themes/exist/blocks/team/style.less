@@ -1,0 +1,138 @@
+@import (reference) "../../styles/vars.less";
+
+#block_team {
+    background-color: @color_white !important;
+
+    .team {
+        &__title {
+            font-size: 55px;
+            font-family: @font_1;
+            font-weight: 100;
+            color: @color_main;
+            text-transform: uppercase;
+            padding-top: 50px;
+        }
+    }
+
+    .card {
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            &--user {
+                width: 50%;
+                display: block;
+                padding: 20px 0;
+
+                @media screen and (max-width : 400px) {
+                    width: 100%;
+                }
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    padding-top: 60px;
+
+                    @media screen and (max-width : 400px) {
+                        padding-top: 10px;
+                    }
+                }
+
+                &:nth-child(2n+0) {
+                    padding-left: 15px;
+
+                    @media screen and (max-width : 400px) {
+                        padding-left: 0px;
+                    }
+                }
+
+                &:nth-child(2n+1) {
+                    padding-right: 15px;
+
+                    @media screen and (max-width : 400px) {
+                        padding-left: 0px;
+                    }
+                }
+
+                &:nth-child(5) {
+                    padding-bottom: 40px;
+                }
+
+                .up {
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+
+                    @media screen and (max-width : 400px) {
+                        display: block;
+                        text-align: center;
+                    }
+
+                    .image {
+                        @media screen and (max-width : 700px) and (min-width : 400px) {
+                            position: absolute;
+                            top: 0;
+                            width: 40%;
+                            right: 0;
+                        }
+                    }
+                }
+
+                .down {
+                    margin-top: 20px;
+                }
+
+                .title {
+                    font-size: 24px;
+                    font-family: @font_1;
+                    font-style: italic;
+                    font-weight: 400;
+                    color: #404040;
+                    padding-top: 130px;
+
+                    @media screen and (max-width : 700px) {
+                        padding-top: 30px;
+                    }
+                }
+
+                .name {
+                    font-size: 48px;
+                    font-family: @font_1;
+                    font-weight: 100;
+                    line-height: 48px !important;
+
+                    @media screen and (max-width : 700px) {
+                        font-size: 43px;
+                    }
+
+                    @media screen and (max-width : 400px) {
+                        font-size: 40px;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    font-family: @font_1;
+                    font-weight: 300;
+                    color: #404040;
+                    line-height: 22.1px;
+                }
+
+                .znany {
+                    img {
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .line {
+        position: absolute;
+        background: @color_main;
+        width: 40px;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+    }
+}

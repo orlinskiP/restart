@@ -1,0 +1,55 @@
+@import (reference) "../../styles/vars.less";
+
+#block_modulecenter {
+    padding: 150px 0px;
+
+    .modulecenter {
+
+        &__title {
+            font-size: 55px;
+            color: @color_main;
+            padding-bottom: 20px;
+
+            @media screen and (max-width: 1366px) {
+                font-size: 43px;
+            }
+
+            @media screen and (max-width : 670px) {
+                font-size: 35px;
+            }
+        }
+
+        &__text {
+            color: @color_black;
+            font-size: 25px;
+
+            @media screen and (max-width: 1366px) {
+                font-size: 22px;
+            }
+
+            &::selection {
+                .select__white;
+            }
+
+            br {
+                &::selection {
+                    .select__white;
+                }
+            }
+
+            span {
+                color: @color_yellow;
+                font-weight: bold;
+                font-size: 35px;
+
+                @media screen and (max-width: 1366px) {
+                    font-size: 32px;
+                }
+
+                &::selection {
+                    .select__white;
+                }
+            }
+        }
+    }
+}

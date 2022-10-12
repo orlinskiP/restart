@@ -1,0 +1,46 @@
+@import (reference) "../../styles/vars.less";
+
+section.homeabout {
+				
+	width: 100%;
+	max-width: 1920px;
+	max-height: 765px;
+	padding: 100px 0;
+	background-image: url("images/home_section_1.jpg");
+	background-size: auto 100%;
+	background-position: center right;
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-color: #f6f6f6;
+
+	.text {
+		 
+		width: 33.33%;
+		box-sizing: border-box;
+
+		@media screen and (max-width: 800px) {
+			width: 100%;
+		}
+
+		>div {
+
+			a.btn {
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 1560px) {
+		background-position: center;
+	}
+	@media screen and (max-width: 1200px) {
+		background-position: left;
+	}			
+	.content .text {
+		@media screen and (max-width: 1200px) {
+			width: 100%;
+		}
+	}
+
+}

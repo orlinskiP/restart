@@ -1,0 +1,108 @@
+@import (reference) "../../styles/vars.less";
+
+#block_wkladki {
+    background-image: url("images/banner_4.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: @color_main;
+    color: @color_white;
+
+    @media screen and (max-width : 400px) {
+        background-position: center bottom;
+    }
+
+    .col-sm-6 {
+
+        h3::after {
+            content: "";
+            width: 40px;
+            height: 2px;
+            background: #b90d0d;
+            display: block;
+            margin-top: 24px;
+        }
+    }
+
+    h3 {
+        font-size: 30px;
+        font-weight: 300;
+        font-family: @font_1;
+
+        p {
+            font-family: @font_1;
+            font-size: 24px;
+            font-weight: 300;
+            color: @color_white;
+
+            @media screen and (max-width : 400px) {
+                font-size: 17px;
+                padding-top: 20px;
+            }
+        }
+    }
+
+    ul {
+        margin: 0px;
+
+        li {
+            font-family: @font_1;
+            font-size: 18px;
+            font-weight: 300;
+            color: @color_white;
+        }
+    }
+
+    p {
+        font-family: @font_1;
+        font-size: 18px;
+        font-weight: 300;
+        color: @color_white;
+        padding-bottom: 20px;
+
+        &:last-child {
+            padding-bottom: 65px;
+        }
+    }
+
+    img {
+        margin-bottom: 30px;
+    }
+
+    .insoles {
+        &__title {
+            font-family: @font_1;
+            font-size: 14px;
+            font-weight: 300;
+            text-transform: uppercase;
+            padding-top: 65px;
+        }
+
+        &__header {
+            font-family: @font_1;
+            font-size: 55px;
+            font-weight: 100;
+            line-height: 1;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+
+            &::after {
+                width: 40px;
+                height: 2px;
+                display: block;
+                margin: 0 auto;
+                margin-top: 24px;
+                content: "";
+            }
+
+            @media screen and (max-width : 400px) {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .col-sm-4 {
+        @media screen and (max-width : 400px) {
+            text-align: center;
+        }
+    }
+}

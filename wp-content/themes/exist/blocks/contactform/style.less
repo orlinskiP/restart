@@ -1,0 +1,197 @@
+@import (reference) "../../styles/vars.less";
+
+#contactform {
+    background-color: #FCE9CC;
+    padding: 150px 0px 230px 0px;
+
+    @media screen and (max-width : 880px) {
+        padding: 50px 0px;
+    }
+
+    .contactform {
+        background-color: @color_brown;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 999;
+
+        @media screen and (max-width : 880px) {
+            position: relative;
+        }
+
+        h3 {
+            color: @color_white;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 27px;
+            padding-bottom: 70px;
+            padding-top: 40px;
+            text-align: center;
+
+            @media screen and (max-width : 880px) {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    .contact {
+        &__info {
+            p {
+                color: @color_black;
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 35px;
+
+                @media screen and (max-width : 1440px) {
+                    font-size: 25px;
+                }
+
+                @media screen and (max-width : 880px) {
+                    font-size: 20px;
+                }
+
+            }
+        }
+
+        &__text {
+            padding-top: 130px;
+
+            @media screen and (max-width : 880px) {
+                padding: 30px 0px;
+            }
+
+            p {
+                color: @color_black;
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 135.19%;
+
+                @media screen and (max-width : 880px) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &__phone,
+        &__number {
+            color: @color_black;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 35px;
+            @media screen and (max-width : 1440px) {
+                font-size: 25px;
+            }
+
+            @media screen and (max-width : 880px) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    input[type=submit] {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+
+        @media screen and (max-width : 880px) {
+            margin-top: 10px;
+        }
+    }
+
+    label {
+        span {
+            color: #9A9999;
+
+            input {
+                width: 170%;
+                height: 50px;
+                margin-bottom: 40px;
+
+                @media screen and (max-width : 1440px) {
+                    width: 135%;
+                }
+
+                @media screen and (max-width : 1370px) {
+                    width: 125%;
+                }
+
+                @media screen and (max-width : 880px) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            input,
+            textarea {
+                background-color: @color_white  !important;
+                color: #9A9999 !important;
+                border-radius: 8px;
+
+                @media screen and (max-width : 500px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #9A9999;
+        font-size: 15px;
+    }
+
+    textarea {
+        width: 175% !important;
+        margin-left: auto;
+        margin-right: auto;
+        height: 150px;
+
+        @media screen and (max-width : 1440px) {
+            width: 142% !important;
+        }
+
+        @media screen and (max-width : 1440px) {
+            width: 132% !important;
+        }
+
+        @media screen and (max-width : 880px) {
+            width: 100% !important;
+        }
+    }
+
+    .wpcf7-submit {
+        background-color: #FCE9CC;
+        border: @color_black  !important;
+        font-family: @font_1;
+        color: @color_black;
+        font-size: 25px;
+        line-height: 33px;
+        font-weight: 700;
+        border-radius: 3px;
+        padding: 20px 170px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width : 880px) {
+            padding: 15px 100px;
+        }
+    }
+
+    .wpcf7-not-valid-tip {
+        color: @color_main  !important;
+    }
+
+    .wpcf7-validation-errors {
+        background-color: #F2DEDE;
+        border: 1px solid #EBCCD1;
+        border-radius: 4px;
+        color: @color_main;
+        font-size: 14px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}

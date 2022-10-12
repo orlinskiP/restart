@@ -1,0 +1,40 @@
+@import (reference) "../../styles/vars.less";
+
+#block_footer {
+
+    background-color: @color_brown;
+    padding-bottom: 20px;
+
+    p {
+        padding-top: 20px;
+        font-size: 20px;
+        color: @color_white;
+    }
+
+    .footer {
+        &__icon {
+            width: 3%;
+            padding: 0px 10px;
+        }
+
+        &__link {
+            color: @color_white;
+            font-size: 20px;
+            text-decoration: none;
+            margin-top: 100px;
+
+            &--regulamin {
+                padding-right: 10px;
+                border-right: 1px solid @color_white;
+            }
+
+            &--polityka {
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+.hentry {
+    margin: 0 !important;
+}

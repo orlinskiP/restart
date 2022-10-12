@@ -1,0 +1,108 @@
+@import (reference) "../../styles/vars.less";
+
+#block_opinie {
+    padding-bottom: 50px;
+
+    .slider {
+        height: 500px;
+        position: relative;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+
+        h4 {
+            color: @color_yellow;
+        }
+    }
+
+    .slide-track {
+        display: flex;
+        width: calc(350px * 48);
+        animation: scroll 40s linear infinite;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-3950px * 28));
+        }
+    }
+
+    .slide {
+        height: 300px;
+        width: 750px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 20px;
+        margin: 0px 30px;
+        justify-content: center;
+        box-shadow: 0px 4px 13px 0px #00000020;
+        text-align: center;
+
+        @media screen and (max-width: 1440px) {
+            width: 650px;
+        }
+
+        @media screen and (max-width : 880px) {
+            width: 300px;
+            height: 400px;
+            padding: 10px;
+        }
+
+        h4 {
+            font-weight: 600;
+            font-size: 45px;
+            line-height: 53px;
+
+            @media screen and (max-width : 1440px) {
+                font-size: 34px;
+            }
+
+            @media screen and (max-width : 880px) {
+                font-size: 22px;
+            }
+        }
+
+        p {
+            padding-left: 20px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+
+            @media screen and (max-width : 1440px) {
+                font-size: 16px;
+            }
+
+            @media screen and (max-width : 880px) {
+                font-size: 12px;
+                padding-left: 0px;
+            }
+        }
+    }
+
+    .slider::before,
+    .slider::after {
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        content: '';
+        height: 100%;
+        position: absolute;
+        width: 5%;
+        z-index: 2;
+    }
+
+    .slider::before {
+        left: 0;
+        top: 0;
+    }
+
+    .slider::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+}

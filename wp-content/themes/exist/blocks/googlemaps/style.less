@@ -1,0 +1,44 @@
+@import (reference) "../../styles/vars.less";
+
+#block_googlemaps {
+    position: relative;
+    padding-bottom: 100px;
+
+    @media screen and (max-width : 880px) {
+        padding-bottom: 20px;
+    }
+
+    .googlemaps {
+        &__title {
+            font-weight: 600;
+            font-size: 50px;
+            line-height: 59px;
+            background: @color_brown;
+            color: @color_white;
+            height: 500px;
+            margin-left: 100px;
+            padding-top: 50px;
+            font-family: @font_1;
+
+            @media screen and (max-width : 880px) {
+                margin-left: 0px;
+                height: 140px;
+                font-size: 40px;
+            }
+        }
+
+        &__maps {
+            position: absolute;
+            top: 150px;
+            right: 0;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media screen and (max-width : 880px) {
+                position: relative;
+                top: 0;
+            }
+        }
+    }
+}

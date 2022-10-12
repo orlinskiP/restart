@@ -1,0 +1,74 @@
+@import (reference) "../../styles/vars.less";
+
+.additional {
+    color: @color_white;
+    position: relative;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 25px;
+
+    @media screen and (max-width : 1280px) {
+        padding-top: 80px;
+    }
+
+    &__center {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__title {
+
+        font-size: 65px;
+        color: @color_yellow;
+
+        @media screen and (max-width: 1366px) {
+            font-size: 55px;
+        }
+
+        @media screen and (max-width: 740px) {
+            font-size: 40px;
+            padding-top: 50px;
+        }
+
+        @media screen and (max-width: 375px) {
+            padding-top: 125px;
+            font-size: 40px;
+        }
+
+        &::selection {
+            .select__orange
+        }
+    }
+
+    img {
+        width: 50% !important;
+    }
+
+
+    p {
+        font-size: 18px;
+        color: @color_main;
+        padding-top: 30px;
+
+        @media screen and (max-width: 1280px) {
+            font-size: 16px;
+            padding-bottom: 75px;
+        }
+
+        @media screen and (max-width: 740px) {
+            padding-bottom: 50px;
+            ;
+        }
+
+        @media screen and (max-width: 375px) {
+            padding-top: 20px;
+            padding-bottom: 50px;
+            font-size: 15px;
+        }
+
+        &::selection {
+            .select__orange
+        }
+    }
+}

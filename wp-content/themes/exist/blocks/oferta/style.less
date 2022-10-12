@@ -1,0 +1,95 @@
+@import (reference) "../../styles/vars.less";
+
+#block_offer {
+    .offer {
+        display: flex;
+        justify-content: space-around;
+        height: auto;
+        padding-bottom: 50px;
+
+        @media screen and (max-width : 670px) {
+            flex-direction: column;
+        }
+
+        &__box {
+            width: 27%;
+            height: auto;
+            box-shadow: 0 19px 38px #0000004d,
+                0 15px 12px #00000038;
+            border-radius: 15px;
+            padding: 20px 20px;
+            position: relative;
+
+            @media screen and (max-width: 1440px) {
+                width: 31%;
+            }
+
+            @media screen and (max-width : 890px) {
+                width: 90%;
+                margin: 0 auto;
+                margin-bottom: 50px;
+            }
+
+            .text {
+                text-align: center;
+                border-bottom: 1px solid @color_main;
+                padding: 3px 0px;
+            }
+
+            p {
+                margin: 5px !important;
+                font-size: 15px;
+
+                @media screen and (max-width : 880px) {
+                    font-size: 13px;
+                }
+            }
+
+            h4 {
+                text-align: center;
+                font-size: 25px;
+                color: @color_yellow;
+
+                @media screen and (max-width : 670px) {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        &__button {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        &__price {
+            padding-top: 3px;
+            font-size: 43px;
+            text-align: center;
+            color: @color_main  !important;
+
+            @media screen and (max-width : 880px) {
+                font-size: 40px;
+            }
+
+            span {
+                font-size: 20px;
+            }
+        }
+
+        &__individual {
+            padding-top: 45px;
+            font-size: 48px;
+            text-align: center;
+        }
+
+        a {
+            padding-top: 50px;
+            .button_1;
+            .button_color_yellow;
+
+            @media screen and (max-width: 1366px) {
+                font-size: 14px;
+            }
+        }
+    }
+}

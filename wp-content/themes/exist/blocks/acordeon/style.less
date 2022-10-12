@@ -1,0 +1,64 @@
+@import (reference) "../../styles/vars.less";
+
+#block_acordeon {
+  padding: 50px 0px;
+
+  .accordion {
+    max-width: 100vw;
+    border-radius: 5px;
+    overflow: hidden;
+    background: @color_white;
+
+    &__label,
+    &__content {
+      padding: 14px 20px;
+    }
+
+    &__label {
+      display: block;
+      color: @color_black;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.1s;
+      box-shadow: 0px 4px 13px 0px #00000020;
+      font-size: 15px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        width: 12px;
+        height: 6px;
+        background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%2300000099;" /></svg>');
+        background-size: contain;
+        transition: transform 0.4s;
+      }
+    }
+
+    &__content {
+      background: @color_white;
+      line-height: 1.6;
+      font-size: 16px;
+      display: none;
+
+      @media screen and (max-width : 880px) {
+        font-size: 15px;
+      }
+    }
+
+    &__input {
+      display: none;
+    }
+  }
+
+  .accordion__input:checked~.accordion__content {
+    display: block;
+  }
+
+  .accordion__input:checked~.accordion__label::after {
+    transform: translateY(-50%) rotate(0.5turn);
+  }
+}

@@ -1,0 +1,111 @@
+@import (reference) "../../styles/vars.less";
+
+#block_cennik {
+    padding: 100px 0px;
+
+    .cennik {
+
+        .table {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 30px;
+
+            &__title {
+                font-weight: bold;
+            }
+
+
+            &__elements {
+                text-align: center;
+            }
+
+            &__line {
+                display: flex;
+
+                p {
+                    padding: 20px 0px
+                }
+            }
+
+            &__price {
+                width: 200px;
+                text-align: center;
+            }
+
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            &__info {
+                font-size: 23px;
+                text-align: center;
+
+                p {
+                    color: @color_brown;
+                }
+            }
+
+            &__button {
+                box-sizing: content-box;
+                padding: 20px 80px;
+                background-color: @color_yellow;
+                border-radius: 8px;
+                margin: 20px 0;
+
+                a {
+                    color: @color_white;
+                }
+
+            }
+        }
+
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
+        @media (min-width: 992px) {
+            .table__box {
+                width: 50%;
+            }
+
+            .table {
+                align-items: unset;
+
+                &__title {
+                    padding-bottom: 20px;
+                }
+
+                &__line {
+                    width: 100%;
+
+                    p {
+                        padding: 5px 0;
+                    }
+                }
+
+                &__price {
+                    width: 100%;
+                    text-align: left;
+
+                }
+            }
+
+            .content {
+                width: 50%;
+
+                &__photo {
+                    width: 75%;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+
+
+}

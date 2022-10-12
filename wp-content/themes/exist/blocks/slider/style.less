@@ -1,0 +1,185 @@
+@import (reference) "../../styles/vars.less";
+
+#block_slider {
+
+	margin: 0;
+
+	.slick-arrow {
+		display: none !important;
+	}
+
+	.slick-dots {
+
+		position: absolute;
+		bottom: 1rem;
+		left: 0;
+		right: 0;
+		width: 100px;
+		margin: 0 auto;
+		list-style: none;
+		display: flex;
+
+		button {
+			background-color: transparent;
+			border-radius: 50%;
+			width: 15px;
+			height: 15px;
+			margin: 0 10px;
+			padding: 0;
+			color: transparent;
+			border: 1px solid #00313B;
+			opacity: 0.25;
+			transition: all 0.3s ease;
+			outline: none;
+			box-shadow: none;
+			cursor: pointer;
+		}
+
+		.slick-active {
+			button {
+				background-color: #FFF;
+				border-color: #FFF;
+				opacity: 1;
+			}
+		}
+
+	}
+
+	.slides {
+
+		width: 100%;
+		height: 100vh;
+		position: relative;
+
+		.slide {
+
+			width: 100%;
+			height: 100vh;
+			background-color: #CCC;
+			background-size: cover;
+			background-position: center right;
+			position: relative;
+			border: none;
+			outline: none;
+			box-shadow: none;
+
+			&.animate {
+				.caption {
+					opacity: 1;
+
+					p {
+						max-height: 100px;
+					}
+
+				}
+			}
+
+			>.container {
+				height: 100%;
+				position: relative;
+				display: flex;
+				align-items: center;
+			}
+
+			&.left {
+				.caption {
+					left: 30px;
+				}
+			}
+
+			&.right {
+				.caption {
+					right: 0px;
+				}
+			}
+
+			@media screen and (max-width: 768px) {
+				background-position: center left;
+			}
+
+			.caption {
+
+				width: 45%;
+				box-sizing: border-box;
+				position: absolute;
+				opacity: 0;
+				transition-delay: 1s;
+				transition: all 1s ease;
+
+				@media screen and (max-width: 768px) {
+					padding-right: 0px;
+					padding: 20px;
+					width: 100%;
+				}
+
+				a {
+					.button_1;
+				}
+
+				h2 {
+					font-family: @font_1;
+					color: #FFF;
+					font-weight: 200;
+
+					@f_size: 64px;
+					@l_size: 75px;
+					@l_spacing: 10px;
+
+					font-size: @f_size;
+					line-height: @l_size;
+					letter-spacing: @l_spacing;
+
+					@media screen and (max-width: 1800px) {
+						font-size: calc(@f_size ~"/"1.2);
+						line-height: calc(@l_size ~"/"1.2);
+						letter-spacing: calc(@l_spacing ~"/"1.2);
+					}
+
+
+					@media screen and (max-width : 1300px) {
+						font-size: calc(@f_size ~"/"1.3);
+						line-height: calc(@l_size ~"/"1.3);
+						letter-spacing: calc(@l_spacing ~"/"1.3);
+					}
+
+					@media screen and (max-width: 600px) {
+						font-size: calc(@f_size ~"/"1.9);
+						line-height: calc(@l_size ~"/"1.9);
+						letter-spacing: calc(@l_spacing ~"/"1.9);
+					}
+				}
+
+				p {
+					font-family: @font_1;
+					font-size: 18px;
+					line-height: 33px;
+					transition: all 2s ease;
+					transition-delay: 1000ms;
+					overflow: hidden;
+					max-height: 0px;
+				}
+			}
+		}
+	}
+
+	.carousel-caption {
+
+		text-align: left;
+		top: 50%;
+		left: 15%;
+		transform: translateY(-50%);
+		width: 615px;
+		max-width: 95%;
+
+		h2 {
+			line-height: 1;
+			letter-spacing: 10px;
+		}
+
+		p {
+			color: #00313B;
+		}
+	}
+
+
+}
